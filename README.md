@@ -3,17 +3,17 @@
 ## Purpose
 ---
 This project aims at the web automation of:
-the basic functions of Google home page (AKA automated smoke test) 
-automating a login process
+the basic functions of Google home page 
+the basic functions of a login page
 
 
 
 ## Project Structure
 ---
 
-There is one solution called automation-projects.sln that hosts two NUnit projects called smoketest-automated and login-automated
+There is one solution called automation-projects.sln that hosts two NUnit projects called google-automated and login-automated
 
-The smoketest-automated project is divided into four test cases. 
+Each project is divided into test cases.
 
 
 
