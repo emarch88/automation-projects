@@ -15,7 +15,7 @@ namespace login_automated
 {
     public class SmokeTestLogin
     {
-        //add a comment on login
+        //new comment on branch
         IWebDriver driver = new ChromeDriver(); //using OpenQA.Selenium;
 
         [SetUp]
