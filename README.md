@@ -34,3 +34,4 @@ The smoketest-automated project is divided into four test cases.
 
 
 The Project file (csproj) contains the details of dependencies and frameworks installed on the project
+# git-bash-practice
