@@ -33,4 +33,4 @@ Each project is divided into test cases.
 + Coded with Visual Studio
 
 
-The Project file (csproj) contains the details of dependencies and frameworks installed on the project
+::: The Project file (csproj) contains the details of dependencies and frameworks installed on the project :::
