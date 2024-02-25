@@ -1,35 +1,36 @@
-# google-automated
+# Automation Projects (With C# And Selenium) :wink: 
 
-This project aims at the web automation of a smoke test on Google home page. 
-A smoke test consists in a quick test to verify the main functionalities of a page work as expected. 
-This Test is automated. The technical details of the automation project can be seen below.
-
-
-Project Structure:
-
-There is one solution called google automated that hosts a single project called google-automated.
-
-The automated smoke test project was divided into four test cases. 
-
-Test Case 1:
-Test Case 2:
-Test Case 3:
-Test Case 4:
+## Purpose
+---
+This project aims at the web automation of:
+the basic functions of Google home page (AKA automated smoke test) 
+automating a login process
 
 
-Technical Details:
 
-1. Programming language: C#
+## Project Structure
+---
 
-2. NuGet Packages installed: 
-Selenium.WebDriver. Installed at project level.
-Selenium.Support. Installed at project level.
-WebDriverManager. Installed at project level.
-NUnit
-NUnit.Analyzers
-Microsoft.NET.Test.Sdk
-coverlet.collector
+There is one solution called automation-projects.sln that hosts two NUnit projects called smoketest-automated and login-automated
 
-3. Project Template: NUnit Test Project.
+The smoketest-automated project is divided into four test cases. 
 
-Note: the Project file (.csproj) contains the details of dependencies and frameworks installed on the project. 
+
+
+### [Technical Details]:
+
+
++ Programming language: C#
++ NuGet Packages installed: 
+  - Selenium.WebDriver. Installed at project level.
+  - Selenium.Support. Installed at project level.
+  - WebDriverManager. Installed at project level.
+  - NUnit
+  - NUnit.Analyzers
+  - Microsoft.NET.Test.Sdk
+  - coverlet.collector
++ Project Template: NUnit Test Project.
++ Coded with Visual Studio
+
+
+The Project file (csproj) contains the details of dependencies and frameworks installed on the project
