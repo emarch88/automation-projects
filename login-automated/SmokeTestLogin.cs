@@ -25,6 +25,10 @@ namespace login_automated
             ChromeConfig config = new ChromeConfig();
             driverManager.SetUpDriver(config);
             driver.Manage().Window.Maximize();
+
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+            
+
         }
 
         [Test]

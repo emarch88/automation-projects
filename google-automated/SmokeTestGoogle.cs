@@ -10,8 +10,10 @@ using System.Text;
 using System.Threading.Tasks;
 using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
+using SeleniumExtras.WaitHelpers;
+using OpenQA.Selenium.Support.UI;
 
-namespace smoketest_automated
+namespace google_automated
 {
     internal class SmokeTestGoogle
     {
@@ -32,21 +34,51 @@ namespace smoketest_automated
             //driverManager.SetUpDriver(configFirefox); //Firefox
             //driverManager.SetUpDriver(configEdge); //Edge
 
-
-
             /* Optimized version of the code above for Chrome:
              * new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig());
              */
 
+            driver.Manage().Window.Maximize();
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);//Implicit wait:
         }
 
 
         [Test]
-        public void Test1()
+        public void RegularEditedSearch()
         {
+            //Perform a regular seach, go back to homepage
             driver.Url = "https://www.google.com/";
-
+            driver.FindElement(By.XPath("//textarea[@class='gLFyf']")).SendKeys("recipes");
+            driver.FindElement(By.XPath("//textarea[@class='gLFyf']")).SendKeys(Keys.Enter);
+            driver.FindElement(By.XPath("//textarea[@class='gLFyf']")).Clear();
+            driver.FindElement(By.XPath("//textarea[@class='gLFyf']")).SendKeys("Salads");
+            driver.Navigate().Back();
+            IWebElement image = driver.FindElement(By.ClassName("lnXdpd"));
+            Assert.IsNotNull(image);
+            driver.Quit();
         }
+
+
+        [Test]
+        public void SearchImages()
+        {
+            //Search images, go back to homepage
+            driver.Url = "https://www.google.com/";
+            driver.FindElement(By.XPath("//textarea[@class='gLFyf']")).SendKeys("famous places");
+            driver.FindElement(By.XPath("//textarea[@class='gLFyf']")).SendKeys(Keys.Enter);
+            driver.FindElement(By.ClassName("FMKtTb")).Click();
+
+            //Explicit wait of 5 seconds:
+            //WebDriverWait time = new WebDriverWait(driver, TimeSpan.FromSeconds(8)); //WebDriverWait class comes from Selenium.Support namespace
+            //time.Until(ExpectedConditions.ElementExists(By.ClassName("F1hUFe"))); //ExpectedConditions class comes fromSeleniumExtras.WaitHelpers namespace
+            driver.Navigate().Back();
+            driver.Navigate().Back();
+            driver.Quit();
+        }
+
+
+        
+        
 
     }
 }
