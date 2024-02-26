@@ -25,6 +25,7 @@ Each project is divided into test cases.
   - Selenium.WebDriver. Installed at project level.
   - Selenium.Support. Installed at project level.
   - WebDriverManager. Installed at project level.
+  - DotNetSeleniumExtras.WaitHelpers. Installed at project level.
   - NUnit
   - NUnit.Analyzers
   - Microsoft.NET.Test.Sdk
